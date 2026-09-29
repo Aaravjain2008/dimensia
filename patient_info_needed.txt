@@ -1,0 +1,51 @@
+1. Basic & diagnostic context
+
+Age, sex
+Type of dementia (if diagnosed) and current stage (early/middle/late)
+Any doctor's notes/prescription details relevant to daily function
+Known comorbidities (diabetes, hypertension, etc. — affects fatigue, meal timing, medication interplay)
+
+2. Cognitive & functional baseline
+
+Domain-by-domain strengths/weaknesses: memory, attention, recognition, language, problem-solving
+MMSE/MoCA score or rough clinician assessment, if available
+Level of independence: what they can do alone vs. what needs supervision
+
+3. Sensory & physical constraints
+
+Hearing status (needs voice loud/slow? hearing aid?)
+Vision status (needs large text/high contrast?)
+Mobility/motor limitations (can they hold a tablet, tap accurately, walk unassisted?)
+Literacy level in their language
+
+4. Daily rhythm
+
+Wake time, sleep time, nap habits
+Meal times
+Medication schedule (times, names — just for reminder purposes, not clinical dosing decisions)
+Best/worst times of day for engagement (many patients have "sundowning" — worse in late afternoon/evening)
+
+5. Personal & cultural content (for reminiscence activities)
+
+Names and photos of close family members
+Familiar places (hometown, landmarks)
+Favorite songs, festivals, foods
+Preferred language/dialect
+
+6. Behavioral & safety flags
+
+Known triggers for agitation or confusion
+History of wandering or getting lost
+Emergency contacts
+Any past safety incidents (falls, etc.)
+
+7. Caregiver-side info
+
+Who the primary caregiver is, and their availability (hours/day realistically available)
+Caregiver's comfort with technology
+Caregiver's current stress/burden level (even a rough self-rating)
+
+8. Ongoing feedback (to be logged over time, not at intake)
+
+Daily activity log: completed / skipped / enjoyed / agitated
+Notes on what worked or didn't, day to day

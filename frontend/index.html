@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEUROVA — Dementia Care Routine & Adaptive CST Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Header Topbar -->
+  <header>
+    <div class="logo-brand">
+      <span>🧠</span>
+      <span>NEUROVA</span>
+      <span style="font-size: 0.85rem; font-weight: normal; color: #94A3B8; margin-left: 0.25rem;">Caregiver Assist</span>
+    </div>
+    <div>
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Offline</span>
+        <span style="color: #64748B;">•</span>
+        <span>llama3.2</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar Tabs -->
+  <div class="nav-bar-wrapper">
+    <button class="nav-tab" onclick="switchTab('intake')">Patient Intake</button>
+    <button class="nav-tab active" onclick="switchTab('schedule')">Daily Routine Schedule</button>
+    <button class="nav-tab" onclick="switchTab('games')">CST Interactive Games</button>
+    <button class="nav-tab" onclick="switchTab('logs')">Caregiver Logs</button>
+  </div>
+
+  <!-- Patient Selection Header Bar -->
+  <div class="patient-bar">
+    <div class="patient-select-group">
+      <span>PATIENT:</span>
+      <select id="patient-preset-selector" class="patient-dropdown-pill" onchange="handlePresetSelectChange(event)">
+        <option value="0">🟢 Anand Sharma (Early Stage Alzheimer's)</option>
+        <option value="1">Kamla Devi (Middle 15m Ceiling)</option>
+        <option value="2">Biren Roy (Late Stage)</option>
+        <option value="3">Unknown Intake Patient (Fallback Test)</option>
+        <option value="4">Pranab Das (Dislikes Music)</option>
+        <option value="5">Maya Sen (Music Distress Trigger)</option>
+        <option value="6">Dipankar Baruah (Vision & Motor)</option>
+      </select>
+    </div>
+    <div class="patient-sync-status">
+      <span class="status-dot"></span>
+      <span>3 recommended activities synchronized</span>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="main-container">
+
+    <!-- TAB 1: PATIENT INTAKE FORM -->
+    <section id="tab-intake" class="tab-content">
+      <div class="white-panel-card">
+        <div class="panel-title">
+          <span>Patient Intake Profile (8-Part Checklist)</span>
+          <span style="font-size: 0.85rem; font-weight: normal; color: #64748B;">Stored as structured programmatic JSON</span>
+        </div>
+
+        <form id="intake-form" onsubmit="handleSaveIntake(event)">
+          <h3 style="color: #0F172A; margin-bottom: 1rem; font-size: 1.1rem;">1. Basic & Diagnostic Context</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Patient Name</label>
+              <input type="text" id="patient-name" required value="Anand Sharma">
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" id="patient-age" value="68">
+            </div>
+            <div class="form-group">
+              <label>Sex</label>
+              <select id="patient-sex">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Dementia Type</label>
+              <select id="dementia-type">
+                <option value="Alzheimer's">Alzheimer's Disease</option>
+                <option value="Vascular">Vascular Dementia</option>
+                <option value="Lewy Body">Lewy Body Dementia</option>
+                <option value="FTD">Frontotemporal (FTD)</option>
+                <option value="Mixed">Mixed Dementia</option>
+                <option value="Unknown">Unknown / Under Evaluation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Current Stage</label>
+              <select id="current-stage">
+                <option value="early">Early Stage (Mild)</option>
+                <option value="middle">Middle Stage (Moderate)</option>
+                <option value="late">Late Stage (Advanced)</option>
+                <option value="">Unknown (Triggers Middle Fallback)</option>
+              </select>
+            </div>
+          </div>
+
+          <h3 style="color: #0F172A; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">2. Cognitive & Domain Strengths</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Memory Strength</label>
+              <select id="strength-memory">
+                <option value="strong">Strong</option>
+                <option value="moderate">Moderate</option>
+                <option value="weak">Weak</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Recognition Strength</label>
+              <select id="strength-recognition">
+                <option value="strong" selected>Strong</option>
+                <option value="moderate">Moderate</option>
+                <option value="weak">Weak</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Attention Strength</label>
+              <select id="strength-attention">
+                <option value="strong">Strong</option>
+                <option value="moderate">Moderate</option>
+                <option value="weak" selected>Weak</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Language Strength</label>
+              <select id="strength-language">
+                <option value="strong">Strong</option>
+                <option value="moderate" selected>Moderate</option>
+                <option value="weak">Weak</option>
+              </select>
+            </div>
+          </div>
+
+          <h3 style="color: #0F172A; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">3. Constraints & Caregiver Time Ceiling</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Hearing Status</label>
+              <select id="hearing-status">
+                <option value="normal">Normal Hearing</option>
+                <option value="needs_loud_slow">Needs Voice Loud & Slow</option>
+                <option value="hearing_aid">Uses Hearing Aid</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Vision Status</label>
+              <select id="vision-status">
+                <option value="normal">Normal / Glasses</option>
+                <option value="needs_large_text">Needs Large Text / High Contrast</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Caregiver Available Hours per Day (Hard Ceiling)</label>
+              <input type="number" step="0.1" id="caregiver-hours" value="2.0">
+            </div>
+          </div>
+
+          <h3 style="color: #0F172A; margin: 1.5rem 0 1rem 0; font-size: 1.1rem;">4. Personal Content & Distress Triggers</h3>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Favorite Songs / Music</label>
+              <input type="text" id="favorite-songs" value="Borgeet melodies, Classic Oldies">
+            </div>
+            <div class="form-group">
+              <label>Known Agitation Triggers (Comma separated)</label>
+              <input type="text" id="known-triggers" placeholder="e.g. music, loud sounds">
+            </div>
+            <div class="form-group">
+              <label>Disliked Activities (Comma separated)</label>
+              <input type="text" id="disliked-activities" placeholder="e.g. music, singing">
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <button type="submit" class="btn-submit">💾 Save Intake Profile & Generate Routine</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 2: ROUTINE SCHEDULE VIEW (MOCKUP SLATE CARD REPLICA) -->
+    <section id="tab-schedule" class="tab-content active">
+      <div class="routine-slate-card">
+        
+        <!-- Slate Card Header -->
+        <div class="routine-card-header">
+          <div class="patient-title-group">
+            <h2 id="sched-patient-title">Anand Sharma — Daily Routine</h2>
+            <div class="patient-subtitle" id="sched-patient-subtitle">Alzheimer's Disease • Preserves verbal recall & nostalgic music recall</div>
+          </div>
+
+          <div class="routine-actions-group">
+            <div class="progress-box">
+              <div class="progress-text" id="sched-time-label">Scheduled Time &nbsp; 40 / 120 min</div>
+              <div class="progress-track">
+                <div class="progress-fill" id="sched-progress-fill" style="width: 33%;"></div>
+              </div>
+              <div class="buffer-text" id="sched-buffer-label">80 min buffer remaining today</div>
+            </div>
+
+            <button class="btn-regenerate" onclick="triggerGenerateSchedule()">
+              <span>🔄</span>
+              <span>Re-generate</span>
+            </button>
+            <button class="btn-print" onclick="window.print()">
+              <span>🖨️</span>
+              <span>Print</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Missing Warning Banner -->
+        <div id="missing-warning-banner" style="display: none; background: rgba(244, 63, 94, 0.2); border: 1px solid #F43F5E; padding: 0.85rem 1.25rem; border-radius: 8px; margin-bottom: 1.5rem; color: #FFE4E6;">
+          ⚠️ <strong>Incomplete Intake Detected:</strong> Missing fields <span id="missing-fields-list"></span>. System defaulted to conservative <strong>middle-stage</strong> priorities.
+        </div>
+
+        <!-- Timeline Items Wrapper -->
+        <div class="timeline-wrapper">
+          <div class="timeline-vertical-line"></div>
+          <div id="schedule-timeline">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+
+        <!-- Slate Footer -->
+        <div class="slate-footer">
+          <div class="fatigue-notice">
+            <span>✓</span>
+            <span>15-minute single activity fatigue ceiling strictly observed</span>
+          </div>
+          <div class="footer-links">
+            <span>Audit Trail</span>
+            <span>•</span>
+            <span onclick="document.querySelectorAll('.nav-tab')[0].click()">Intake Profile</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TAB 3: CST INTERACTIVE GAMES -->
+    <section id="tab-games" class="tab-content">
+      <div class="white-panel-card">
+        <div class="panel-title">
+          <span>Cognitive Stimulation Therapy (CST) Interactive Task</span>
+          <span style="font-size: 0.85rem; font-weight: normal; color: #0369A1; background: #E0F2FE; padding: 0.2rem 0.6rem; border-radius: 4px;">Strength-First Bridging</span>
+        </div>
+
+        <div class="game-card-view">
+          <div id="game-bridge-note" class="game-bridge-pill">
+            Strength-first bridge: Starting from strongest domain 'recognition' to engage residual ability smoothly.
+          </div>
+
+          <div id="game-prompt" class="game-prompt-heading">
+            Which of these is used to drink tea or warm water?
+          </div>
+
+          <div id="game-options" class="game-options-stack">
+            <!-- Game options dynamically rendered -->
+          </div>
+
+          <div id="game-guidance" class="caregiver-guide-card" style="background: #F8FAFC; border-color: #CBD5E1; color: #334155; text-align: left;">
+            <span class="guide-icon">💡</span>
+            <div><strong>Caregiver Guidance:</strong> Hold up a real teacup or point to the screen. Ask with a warm tone.</div>
+          </div>
+
+          <div style="margin-top: 1.75rem;">
+            <button class="btn-submit" onclick="fetchNextGameTask()">➡️ Next Activity Task</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: CAREGIVER LOGS -->
+    <section id="tab-logs" class="tab-content">
+      <div class="white-panel-card">
+        <div class="panel-title">Log Daily Activity Outcome</div>
+        <form id="log-form" onsubmit="handleSaveLog(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Activity Name</label>
+              <input type="text" id="log-activity-name" required value="Family Photo Recognition">
+            </div>
+            <div class="form-group">
+              <label>Category</label>
+              <select id="log-category">
+                <option value="recognition">Recognition</option>
+                <option value="memory">Memory</option>
+                <option value="reminiscence">Reminiscence</option>
+                <option value="orientation">Orientation</option>
+                <option value="language">Language</option>
+                <option value="physical">Physical</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Outcome</label>
+              <select id="log-outcome">
+                <option value="completed">Completed Smoothly</option>
+                <option value="enjoyed">Enjoyed & Smiled</option>
+                <option value="skipped">Skipped / Fatigued</option>
+                <option value="agitated">Agitated / Distressed</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top: 1rem;">
+            <label>Caregiver Notes (What worked or didn't)</label>
+            <input type="text" id="log-notes" placeholder="e.g. Responded warmly to daughter's picture, pointed independently.">
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <button type="submit" class="btn-submit">📝 Submit Outcome Log</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="white-panel-card">
+        <div class="panel-title">Activity Log History</div>
+        <div id="log-history-list">
+          <p style="color: #64748B;">No activity logs submitted yet today.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "source-routine-reduces-agitation",
+    "topic": "mechanism-of-routine",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Beyond structured cognitive training, physical exercise has an\nindependently documented association with reduced dementia risk and\nbetter outcomes for people already diagnosed, and social engagement and\nroutine/environmental structuring (consistent schedules, clearly labeled\nspaces) measurably reduce confusion and agitation in daily care."
+  },
+  {
+    "id": "source-cst-definition",
+    "topic": "activity-category-cst",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Cognitive Stimulation Therapy (CST) is a structured, group-based,\nnon-drug intervention involving memory, language, orientation, and social\nactivities, generally delivered by a trained facilitator. It has a solid\nevidence base as a way to support cognitive function and quality of life,\nthough it depends on access to trained personnel and a suitable venue —\na real constraint in remote settings."
+  },
+  {
+    "id": "source-icst-home-delivery",
+    "topic": "activity-category-icst",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "individual Cognitive Stimulation Therapy (iCST) adapted the same\nunderlying model for delivery at home by a family caregiver rather than a\nprofessional facilitator, and has been tested in peer-reviewed randomized\ncontrolled trials — establishing that caregiver-delivered cognitive\nstimulation is a legitimate, studied model, not merely a theoretical\nworkaround."
+  },
+  {
+    "id": "source-nimhans-icare-cdct",
+    "topic": "caregiver-led-training-india",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "In the Indian context specifically, NIMHANS Bengaluru has developed and\npiloted two directly relevant programs: iCARE (Individualized Cognitive\nAugmentation Regimen for Elderly), a caregiver-driven training program\nwhere caregivers are trained as active co-therapists across multiple\ncognitive domains, with pilot data (32 patient-caregiver pairs) showing\nimprovement across attention, memory, and executive function; and CDCT\n(Caregiver-Driven Cognitive Training), built around nine structured\ncognitive tasks, whose feasibility study reported improved cognitive\nfunction, better quality of life, and increased caregiver confidence."
+  },
+  {
+    "id": "source-physical-exercise-benefit",
+    "topic": "activity-category-physical",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Beyond structured cognitive training, physical exercise has an\nindependently documented association with reduced dementia risk and\nbetter outcomes for people already diagnosed, and social engagement and\nroutine/environmental structuring (consistent schedules, clearly labeled\nspaces) measurably reduce confusion and agitation in daily care."
+  },
+  {
+    "id": "source-stage-early",
+    "topic": "stage-symptoms-early",
+    "stage": "early",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Early stage: difficulty finding words, misplacing items and being unable\nto retrace steps, trouble with planning or organizing, mild\ndisorientation in unfamiliar settings, and subtle personality or mood\nshifts. At this stage, the person is often still functionally independent\nand may actively try to compensate — writing more notes, avoiding\nunfamiliar situations."
+  },
+  {
+    "id": "source-stage-middle",
+    "topic": "stage-symptoms-middle",
+    "stage": "middle",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Middle stage: the longest stage for most patients, often lasting several\nyears. Memory loss becomes pronounced, including forgetting the names of\nclose family members; confusion about time and place deepens; wandering\nbecomes a genuine safety risk; behavioral changes such as agitation,\nsuspicion, or repetitive actions appear; and the person increasingly\nneeds help with basic daily activities like dressing, bathing, and eating."
+  },
+  {
+    "id": "source-stage-late",
+    "topic": "stage-symptoms-late",
+    "stage": "late",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Late stage: severe impairment across the board. Verbal communication\nlargely breaks down; physical function declines, including walking and\neventually swallowing; the person becomes fully dependent on caregivers\nfor all activities of daily living. Swallowing difficulty in particular\nraises the risk of aspiration pneumonia, which is a leading cause of\ndeath in advanced dementia."
+  },
+  {
+    "id": "source-caregiver-burden",
+    "topic": "caregiver-burden",
+    "stage": "all",
+    "source": "original research document",
+    "type": "source_excerpt",
+    "text": "Caregivers — typically a spouse or adult child, and in the Indian context\noverwhelmingly informal, unpaid family members rather than professional\nstaff — face documented elevated rates of depression, chronic stress, and\nphysical health decline, driven by the near-continuous nature of\ndementia care as the disease progresses. Formal support infrastructure\n(respite care, trained home-health aides, caregiver counseling) remains\nlimited in India generally and considerably more so outside major\nmetropolitan centers — which is precisely why intervention models that\nactively train and support the caregiver, rather than treating them as\nincidental to the patient's care, have shown particular relevance and\npromise in the Indian research described above."
+  },
+  {
+    "id": "source-what-not-to-claim",
+    "topic": "ethical-guardrail-claims",
+    "stage": "all",
+    "source": "pitch material (impact analysis section)",
+    "type": "source_excerpt",
+    "text": "What You Cannot Claim (And Shouldn’t)\n“This slows or prevents dementia”: No digital intervention has proven disease-modifying effects.\n\n“This cures cognitive decline”: Evidence shows improvements in specific cognitive domains (attention, memory, executive function), not reversal of dementia.\n\n“This replaces professional care”: Your platform supports engagement and structure—it doesn’t replace clinical assessment, medication management, or crisis intervention.\n\nCorrect framing: “This platform supports engagement, structure, and caregiver capability. Any claim of cognitive benefit would need proper clinical validation using measurable outcomes like adherence, engagement, caregiver burden, and quality of life.”"
+  },
+  {
+    "id": "derived-stage-decision-table",
+    "topic": "stage-decision",
+    "stage": "all",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Early: priorities=independence-preserving scaffolding, habit formation, mild challenge+novelty, external aids; avoid=over-helping, replacing initiation, infantilizing tasks; example=short memory+language games with written cues, light physical+planning, orientation with calendars/photos. Middle: priorities=safety structure, calming pacing, short cognitive windows early in day, clear transitions, reduced open-ended choice; avoid=long multi-step sequences, high failure-risk tasks, overstimulation, unsupervised transitions; example=recognition+reminiscence with photos/songs, simple cued physical movement, short familiar discussion, labeled environment check-ins. Late: priorities=comfort, sensory and relational presence, reduce distress, familiar sensory input; avoid=task-completion goals, verbal demands, novel/complex sequencing; example=familiar music at low volume, preferred textures, quiet presence, passive sensory experiences."
+  },
+  {
+    "id": "derived-worked-example-early",
+    "topic": "worked-example",
+    "stage": "early",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Early-stage, strong residual memory, weaker attention. Sequence: (1) memory warm-up using strongest domain, e.g. recall three things done that morning; (2) bridge into attention via labeled photo cards, naming while pointing; (3) light physical+orientation, walk to window, note weather/season on wall calendar; (4) close with independence cue, person writes own reminder. Duration ~20-25 min. Caregiver supplies materials, stays mostly silent, praises effort not perfection."
+  },
+  {
+    "id": "derived-worked-example-middle",
+    "topic": "worked-example",
+    "stage": "middle",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Middle-stage, strong recognition, weaker memory and initiation. Sequence: (1) recognition lead with 4-5 large familiar photos, point or name; (2) reminiscence bridge via one familiar song, ask only if they like it, no free recall demand; (3) simple physical with cue, seated marching or arm raises to rhythm; (4) safety/orientation close, check door locked, water filled, bathroom label visible. Duration 15-20 min. Caregiver keeps transitions short and verbal cues concrete."
+  },
+  {
+    "id": "derived-worked-example-late",
+    "topic": "worked-example",
+    "stage": "late",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Late-stage, residual sensory/emotional responsiveness only. Sequence: (1) preferred music at low volume; (2) soft familiar texture placed in hands if tolerated; (3) caregiver at eye level, gentle touch on hand/shoulder if tolerated, minimal speech; (4) end when person shows signs of settling or fatigue, no task-complete language. Duration flexible 5-15 min. Goal is comfort, not performance."
+  },
+  {
+    "id": "derived-activity-seed-list",
+    "topic": "activity-taxonomy-examples",
+    "stage": "all",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Memory: recall three things eaten yesterday, name of first school, complete a familiar sequence. Language: finish a well-known proverb/lyric, describe a visible object in one sentence. Orientation: point to day/season on large calendar, name current room. Recognition: match faces to names from small photo set, identify common household objects. Problem-solving: sort 4-5 objects by color/size, picture-cued 'what do you need to make tea'. Discussion/social: what did you enjoy about that song, tell me about a favorite holiday. Reminiscence: wedding/festival photos, music from young adulthood, familiar object from past work/hobby. Physical: seated marching, arm circles to music, short supervised walk to labeled destination, gentle stretching with verbal cues only."
+  },
+  {
+    "id": "derived-standing-guardrails",
+    "topic": "guardrails",
+    "stage": "all",
+    "source": "engineering derivation",
+    "type": "derived_illustrative",
+    "text": "Never adjust plan difficulty or claim clinical change from a single session. Poor performance may be sensory, motor, fatigue, mood, or environmental, not automatically cognitive decline. Never frame output as treating, curing, reversing, or stopping dementia; use language of support, engagement, residual ability, structure, distress reduction. Every plan must stay realistic in length/complexity for the caregiver's actual available time. Once middle-stage, default to safety and orientation cues. Place higher-demand activities earlier in the day, calmer/familiar activities later. Per-patient intake data always overrides these generic defaults."
+  }
+]

@@ -1,0 +1,556 @@
+/* NEUROVA Platform - Modern Caregiver Design System (Mockup Replica) */
+
+:root {
+  --bg-topbar: #161920;
+  --bg-page: #F4F7F6;
+  --bg-card-slate: #A3A9B3;
+  --bg-card-slate-dark: #8E95A0;
+
+  --accent-emerald: #10B981;
+  --accent-emerald-dark: #059669;
+  --accent-mint-bg: #D1F2E7;
+  --accent-teal-tag: #064E3B;
+  --accent-teal-text: #34D399;
+
+  --slate-dark: #0F172A;
+  --slate-card-bg: #1E293B;
+  --slate-guide-bg: rgba(51, 65, 85, 0.75);
+  --slate-border: #64748B;
+  --slate-border-light: #CBD5E1;
+
+  --text-white: #FFFFFF;
+  --text-muted-slate: #94A3B8;
+  --text-dark: #0F172A;
+
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, #EFF8F4 0%, #F5FAFA 40%, #EBF3F0 100%), #F4F7F6;
+  color: var(--text-dark);
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Top Navigation Bar (Header) */
+header {
+  background: var(--bg-topbar);
+  color: #FFFFFF;
+  padding: 0.85rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.status-pill {
+  background: #0F172A;
+  border: 1px solid #334155;
+  color: #CBD5E1;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+/* Floating Navigation Tabs Bar */
+.nav-bar-wrapper {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E2E8F0;
+  padding: 0.75rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-tab {
+  background: transparent;
+  color: #64748B;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-tab:hover {
+  color: #0F172A;
+  background: #F1F5F9;
+}
+
+.nav-tab.active {
+  background: var(--accent-mint-bg);
+  color: var(--accent-emerald-dark);
+  font-weight: 700;
+}
+
+/* Patient Selector Bar */
+.patient-bar {
+  max-width: 1240px;
+  margin: 1.5rem auto 1rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.patient-select-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.patient-dropdown-pill {
+  background: #0F172A;
+  color: #FFFFFF;
+  border: 1px solid #334155;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  outline: none;
+}
+
+.patient-sync-status {
+  color: #059669;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1240px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Mockup Slate Routine Card */
+.routine-slate-card {
+  background: linear-gradient(145deg, #B0B7C3 0%, #9BA2AD 100%);
+  border: 1px solid #8B929E;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  color: #FFFFFF;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.15);
+}
+
+.routine-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.patient-title-group h2 {
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.patient-subtitle {
+  color: #E2E8F0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.routine-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.progress-box {
+  text-align: right;
+}
+
+.progress-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.progress-track {
+  width: 160px;
+  height: 8px;
+  background: #CBD5E1;
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent-emerald);
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.buffer-text {
+  font-size: 0.82rem;
+  color: #047857;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.btn-regenerate {
+  background: var(--accent-emerald);
+  color: #064E3B;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn-regenerate:hover {
+  background: #34D399;
+}
+
+.btn-print {
+  background: #334155;
+  color: #F8FAFC;
+  border: 1px solid #475569;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-print:hover {
+  background: #475569;
+}
+
+/* Timeline Layout */
+.timeline-wrapper {
+  position: relative;
+  padding-left: 2.25rem;
+  margin-top: 1rem;
+}
+
+.timeline-vertical-line {
+  position: absolute;
+  left: 11px;
+  top: 12px;
+  bottom: 24px;
+  width: 2px;
+  background: #64748B;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+
+.timeline-node {
+  position: absolute;
+  left: -2.25rem;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: #0F172A;
+  border: 3px solid var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  z-index: 2;
+}
+
+.timeline-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.time-cat-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.item-time {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.item-cat-pill {
+  background: var(--accent-teal-tag);
+  color: var(--accent-teal-text);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.item-activity-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.item-duration-pill {
+  background: #334155;
+  color: #F1F5F9;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 14px;
+}
+
+.item-sub-desc {
+  color: #E2E8F0;
+  font-size: 0.92rem;
+  margin-bottom: 0.75rem;
+}
+
+.caregiver-guide-card {
+  background: rgba(51, 65, 85, 0.75);
+  border: 1px solid #64748B;
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.25rem;
+  color: #F1F5F9;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.guide-icon {
+  color: #F59E0B;
+  font-size: 1.1rem;
+  margin-top: 0.1rem;
+}
+
+/* Slate Footer */
+.slate-footer {
+  border-top: 1px solid #7E8694;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.fatigue-notice {
+  color: var(--accent-emerald-dark);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: 12px;
+}
+
+.footer-links {
+  color: #475569;
+  font-weight: 600;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.footer-links span:hover {
+  color: #0F172A;
+}
+
+/* White Form Cards for Intake & Logs */
+.white-panel-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.panel-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+input, select, textarea {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-emerald);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.btn-submit {
+  background: #0F172A;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.85rem 2rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-submit:hover {
+  background: #1E293B;
+}
+
+/* CST Game Module Styles */
+.game-card-view {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.game-bridge-pill {
+  background: #E0F2FE;
+  color: #0369A1;
+  padding: 0.4rem 1.1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.game-prompt-heading {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1.75rem;
+  line-height: 1.45;
+}
+
+.game-options-stack {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.game-choice-btn {
+  background: #F8FAFC;
+  border: 2px solid #E2E8F0;
+  color: #0F172A;
+  padding: 1.15rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.game-choice-btn:hover {
+  border-color: var(--accent-emerald);
+  background: #ECFDF5;
+}
